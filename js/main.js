@@ -19,11 +19,43 @@
       const filter = btn.getAttribute('data-filter')
       let visibleCount = 0
 
+      // animação de saída/entrada
       items.forEach((it) => {
         const cat = it.getAttribute('data-category')
         const match = filter === 'all' || cat === filter
-        it.classList.toggle('d-none', !match)
-        if (match) visibleCount++
+
+        if (match && it.classList.contains('d-none')) {
+          // entrando
+          it.classList.remove('d-none')
+          it.classList.add('fade-enter')
+          requestAnimationFrame(() => {
+            it.classList.add('fade-enter-active')
+            it.addEventListener(
+              'transitionend',
+              () => {
+                it.classList.remove('fade-enter', 'fade-enter-active')
+              },
+              { once: true }
+            )
+          })
+          visibleCount++
+        } else if (!match && !it.classList.contains('d-none')) {
+          // saindo
+          it.classList.add('fade-exit')
+          requestAnimationFrame(() => {
+            it.classList.add('fade-exit-active')
+            it.addEventListener(
+              'transitionend',
+              () => {
+                it.classList.add('d-none')
+                it.classList.remove('fade-exit', 'fade-exit-active')
+              },
+              { once: true }
+            )
+          })
+        } else if (match) {
+          visibleCount++
+        }
       })
 
       empty.classList.toggle('d-none', visibleCount > 0)
