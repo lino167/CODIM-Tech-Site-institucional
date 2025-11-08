@@ -150,6 +150,132 @@
           </div>
         </div>
       </section>
+
+      <!-- CASES / PORTFÓLIO -->
+      <section class="cases py-5">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold">Cases & Portfólio</h2>
+            <p class="text-muted m-0">Projetos que entregam resultado</p>
+          </div>
+
+          <!-- Filtros -->
+          <div
+            class="d-flex flex-wrap justify-content-center gap-2 mb-4"
+            role="tablist"
+            aria-label="Filtro de cases"
+          >
+            <button
+              class="btn btn-outline active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+            <button class="btn btn-outline" data-filter="site">Sites</button>
+            <button class="btn btn-outline" data-filter="sistema">
+              Sistemas
+            </button>
+            <button class="btn btn-outline" data-filter="dashboard">
+              Dashboards
+            </button>
+            <button class="btn btn-outline" data-filter="integracao">
+              Integrações
+            </button>
+          </div>
+
+          <!-- Grid -->
+          <div id="cases-grid" class="row g-4">
+            <!-- Card -->
+            <div
+              class="col-12 col-sm-6 col-lg-4 case-item"
+              data-category="site"
+            >
+              <div class="card h-100 bg-dark text-light border-0 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="https://via.placeholder.com/600x380/181818/ffffff?text=Landing+CODIM"
+                  alt="Landing Page CODIM"
+                />
+                <div class="card-body">
+                  <span class="badge bg-secondary mb-2">Site</span>
+                  <h5 class="card-title">Landing CODIM</h5>
+                  <p class="card-text text-muted">
+                    Landing page conversiva com SEO on-page.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-lg-4 case-item"
+              data-category="sistema"
+            >
+              <div class="card h-100 bg-dark text-light border-0 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="https://via.placeholder.com/600x380/181818/ffffff?text=Sistema+OS"
+                  alt="Sistema OS Kairos"
+                />
+                <div class="card-body">
+                  <span class="badge bg-secondary mb-2">Sistema</span>
+                  <h5 class="card-title">Kairos OS</h5>
+                  <p class="card-text text-muted">
+                    Gestão de ordens de serviço com fluxo claro.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-lg-4 case-item"
+              data-category="dashboard"
+            >
+              <div class="card h-100 bg-dark text-light border-0 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="https://via.placeholder.com/600x380/181818/ffffff?text=Dashboard"
+                  alt="Dashboard CODIM"
+                />
+                <div class="card-body">
+                  <span class="badge bg-secondary mb-2">Dashboard</span>
+                  <h5 class="card-title">Painel de Indicadores</h5>
+                  <p class="card-text text-muted">
+                    KPIs em tempo real com filtros rápidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-lg-4 case-item"
+              data-category="integracao"
+            >
+              <div class="card h-100 bg-dark text-light border-0 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="https://via.placeholder.com/600x380/181818/ffffff?text=Integra%C3%A7%C3%B5es"
+                  alt="Integrações APIs"
+                />
+                <div class="card-body">
+                  <span class="badge bg-secondary mb-2">Integrações</span>
+                  <h5 class="card-title">APIs & Automação</h5>
+                  <p class="card-text text-muted">
+                    Robôs e integrações que reduzem tarefas manuais.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplique/edite mais cards conforme precisar -->
+          </div>
+
+          <!-- Estado vazio (aparece quando nenhum card casa com o filtro) -->
+          <div id="cases-empty" class="text-center text-muted mt-4 d-none">
+            Nenhum case nessa categoria… tente outro filtro.
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER (padrão) -->
