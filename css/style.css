@@ -199,3 +199,24 @@ footer a:hover {
   object-fit: cover;
   height: 220px;
 }
+
+/* Fade util */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 180ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: 140ms ease;
+}
