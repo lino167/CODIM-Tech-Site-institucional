@@ -300,3 +300,41 @@ footer a:hover {
   border-color: var(--color-brand);
   box-shadow: 0 0 0 0.2rem rgba(255, 47, 47, 0.15);
 }
+
+/* SOLUÇÕES */
+.solutions-header,
+.solutions-grid,
+.solutions-process,
+.solutions-faq,
+.solutions-cta {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.solutions-grid .card {
+  border-radius: var(--radius-lg);
+  transition: var(--transition-fast);
+}
+.solutions-grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.solutions-grid .card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Accordion dark */
+.accordion-item.border {
+  border-color: var(--color-border) !important;
+}
+.accordion-button {
+  border-color: var(--color-border) !important;
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 47, 47, 0.15);
+}
+.accordion-button:not(.collapsed) {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
