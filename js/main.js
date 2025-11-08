@@ -62,3 +62,16 @@
     })
   })
 })()
+
+// reveal simples para timeline (opcional)
+document.addEventListener('scroll', () => {
+  document
+    .querySelectorAll('.timeline-item .timeline-content')
+    .forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      const visible = rect.top < window.innerHeight - 80
+      el.style.transform = visible ? 'translateY(0)' : 'translateY(12px)'
+      el.style.opacity = visible ? '1' : '0'
+      el.style.transition = 'all .45s ease'
+    })
+})
