@@ -1,0 +1,55 @@
+:root {
+  /* ======= CORES BASE ======= */
+  --color-brand: #ff2f2f; /* Vermelho CODIM */
+  --color-brand-dark: #cc2323; /* Tom mais escuro para hover */
+  --color-bg: #0b0b0b; /* Fundo geral (preto) */
+  --color-surface: #181818; /* Cards, seções elevadas */
+  --color-text: #f5f5f5; /* Texto principal */
+  --color-muted: #a3a3a3; /* Texto secundário */
+  --color-border: #2a2a2a; /* Bordas sutis */
+}
+
+:root {
+  /* ======= TIPOGRAFIA ======= */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem; /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height: 1.6;
+}
+
+:root {
+  /* ======= ESPAÇAMENTOS E BORDAS ======= */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 4rem; /* 64px */
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+:root {
+  /* ======= SOMBRAS E TRANSIÇÕES ======= */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-normal: all 0.35s ease;
+}
+
+/* Tema claro (ativo quando o body tiver a classe .light-mode) */
+body.light-mode {
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-text: #111;
+  --color-muted: #555;
+  --color-border: #ddd;
+}
