@@ -1,0 +1,14 @@
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+.btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
