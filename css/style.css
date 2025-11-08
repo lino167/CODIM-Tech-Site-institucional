@@ -338,3 +338,37 @@ footer a:hover {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
 }
+
+/* CASES PAGE */
+.cases-header,
+.cases-filters,
+.cases-grid {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cases-filters .btn-outline {
+  border-color: var(--color-border);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+.cases-filters .btn-outline:hover {
+  border-color: var(--color-brand);
+}
+.cases-filters .btn-outline.active {
+  border-color: var(--color-brand);
+  color: #fff;
+  background: var(--color-brand);
+}
+
+.cases-grid .card {
+  border-radius: var(--radius-lg);
+  transition: var(--transition-fast);
+}
+.cases-grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.cases-grid .card-img-top {
+  object-fit: cover;
+  height: 220px;
+}
