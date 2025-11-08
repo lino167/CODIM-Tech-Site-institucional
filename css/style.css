@@ -283,3 +283,20 @@ footer a:hover {
     left: 1px;
   }
 }
+
+/* CONTATO */
+.contact-header,
+.contact-form {
+  border-bottom: 1px solid var(--color-border);
+}
+.contact-form .form-control,
+.contact-form .form-select {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 0.2rem rgba(255, 47, 47, 0.15);
+}
