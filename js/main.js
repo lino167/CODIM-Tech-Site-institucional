@@ -147,3 +147,48 @@
     form.classList.remove('was-validated')
   })
 })()
+
+// ====== Cases Modal (preenche conteúdo dinâmico) ======
+;(function setupCasesModal() {
+  const modalEl = document.getElementById('caseModal')
+  if (!modalEl) return
+
+  const titleEl = document.getElementById('caseModalTitle')
+  const imgEl = document.getElementById('caseModalImg')
+  const descEl = document.getElementById('caseModalDesc')
+  const linkEl = document.getElementById('caseModalLink')
+
+  // Banco mínimo de dados (mock)
+  const DATA = {
+    alfa: {
+      title: 'Empresa Alfa — Site Institucional',
+      img: 'https://via.placeholder.com/1200x720/181818/ffffff?text=Empresa+Alfa',
+      desc: 'Site institucional com SEO, páginas essenciais e acessibilidade.',
+      link: '#',
+    },
+    kairos: {
+      title: 'Kairos OS — Sistema de OS',
+      img: 'https://via.placeholder.com/1200x720/181818/ffffff?text=Kairos+OS',
+      desc: 'CRUD de ordens de serviço, perfis de acesso e métricas operacionais.',
+      link: '#',
+    },
+    kpis: {
+      title: 'Indicadores Comerciais — Dashboard',
+      img: 'https://via.placeholder.com/1200x720/181818/ffffff?text=Dashboard+KPIs',
+      desc: 'Painel com KPIs, filtros rápidos e export básico.',
+      link: '#',
+    },
+  }
+
+  modalEl.addEventListener('show.bs.modal', (ev) => {
+    const btn = ev.relatedTarget
+    const key = btn?.getAttribute('data-case')
+    const data = key ? DATA[key] : null
+    if (!data) return
+    titleEl.textContent = data.title
+    imgEl.src = data.img
+    imgEl.alt = data.title
+    descEl.textContent = data.desc
+    linkEl.href = data.link
+  })
+})()
